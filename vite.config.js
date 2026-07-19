@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
     server: {
       proxy: {
         '/api': {
-          target: process.env.VITE_API_BASE_URL || 'http://localhost:8082',
+          target: process.env.VITE_API_BASE_URL || 'https://movie-course-backend-deployment.onrender.com',
           changeOrigin: true,
         },
       },
