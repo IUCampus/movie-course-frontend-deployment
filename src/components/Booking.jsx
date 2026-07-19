@@ -49,7 +49,7 @@ export default function Booking() {
       try {
         setLoadingMovie(true);
         setMovieError(null);
-        const res = await axios.get(`api/movies/${movieId}`);
+        const res = await axios.get(`/api/movies/${movieId}`);
         setMovie(res.data);
       } catch (e) {
         setMovieError('Unable to load movie details.');
@@ -83,7 +83,7 @@ export default function Booking() {
 
     setSubmitting(true);
     try {
-      await axios.post('api/bookings', null, {
+      await axios.post('/api/bookings', null, {
         params: {
           userId,
           movieId: movie.id,
