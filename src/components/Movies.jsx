@@ -39,7 +39,7 @@ export default function MovieCatalog() {
       setError(null);
 
       try {
-        const response = await axios.get('/api/movies/all');
+        const response = await axios.get('api/movies/all');
         if (!isMounted) return;
 
         const data = response.data || [];
@@ -100,7 +100,7 @@ export default function MovieCatalog() {
 
     (async () => {
       try {
-        const response = await axios.get('/api/movies/all');
+        const response = await axios.get('api/movies/all');
         const data = response.data || [];
         setMovies(data);
       } catch (err) {
